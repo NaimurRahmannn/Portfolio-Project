@@ -20,7 +20,7 @@ export default function PortfolioSidebar({
     ]
 
     return (
-        <aside className="w-full max-w-85 border-r border-white/10 bg-[#15263f] px-7 py-10 text-slate-100 shadow-[18px_0_40px_rgba(2,8,23,0.3)] sm:px-8">
+        <aside className="w-full max-w-85 border-r border-white/10 bg-[#15263f] px-7 py-10 text-slate-100 shadow-[18px_0_40px_rgba(2,8,23,0.3)] sm:px-8 lg:sticky lg:top-0 lg:h-screen lg:self-start lg:overflow-y-auto">
             <div className="flex min-h-[calc(100vh-5rem)] flex-col pt-10 sm:pt-12">
                 <div className="flex flex-col items-center text-center">
                     <div className="h-28 w-28 overflow-hidden rounded-full border-2 border-slate-200/80 p-1 shadow-[0_10px_30px_rgba(2,8,23,0.35)]">
