@@ -84,7 +84,7 @@ export default function AboutSection() {
         <section className="mx-auto w-full max-w-305">
             <article className="rounded-[28px] border border-slate-200/80 bg-white px-6 py-6 shadow-[0_14px_36px_rgba(15,23,42,0.08)] sm:px-8 sm:py-7 lg:px-9 lg:py-8">
                 <header>
-                    <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">About</h1>
+                    <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-2xl">About</h1>
                     <p className="mt-2.5 max-w-3xl text-[15px] leading-6 text-slate-500 sm:text-base">
                         Backend-focused software engineer passionate about building scalable applications and solving
                         real-world problems.
