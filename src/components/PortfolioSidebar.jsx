@@ -6,7 +6,7 @@ import {
 export default function PortfolioSidebar({
     profileImage = '/profile.jpg',
     email = 'naimurrahmanlamm@gmail.com',
-    location = 'Tangail, Dhaka',
+    location = 'Dhaka, Bangladesh',
     linkedinUrl = '#',
     githubUrl = '#',
     mediumUrl = '#',
@@ -26,13 +26,13 @@ export default function PortfolioSidebar({
                     <div className="h-28 w-28 overflow-hidden rounded-full border-2 border-slate-200/80 p-1 shadow-[0_10px_30px_rgba(2,8,23,0.35)]">
                     <img
                         src={profileImage}
-                        alt="Profile"
+                        alt="Naimur Rahman Lam"
                         className="h-full w-full rounded-full object-cover"
                     />
                 </div>
 
                     <h2 className="mt-4 text-2xl font-semibold tracking-wide">Naimur Rahman Lam</h2>
-                    <p className="mt-1 text-sm text-slate-300">Software Engineer</p>
+                    <p className="mt-1 text-sm text-slate-300">Backend & AI Software Engineer</p>
 
                     <div className="mt-5 grid w-full max-w-52 grid-cols-4 gap-1">
                         {socialLinks.map((item) => {

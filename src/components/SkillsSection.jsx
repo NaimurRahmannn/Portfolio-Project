@@ -1,4 +1,4 @@
-import { Code2, Monitor, Puzzle, Trophy } from "lucide-react";
+import { Code2, Monitor, Puzzle, Trophy, Wrench } from "lucide-react";
 import pythonLogo from "../../python-logo-only.png";
 import djangoLogo from "../../django-logo-png_seeklogo-394570.png";
 import postgresqlLogo from "../../PostgreSQL_logo.3colors.120x120.png";
@@ -8,8 +8,8 @@ import reactLogo from "../assets/react.svg";
 
 const statsCards = [
   {
-    value: "10+",
-    label: "Technologies",
+    value: "35+",
+    label: "Technologies & Tools",
     icon: Code2,
     cardClass:
       "border-sky-200/70 bg-linear-to-br from-sky-50 via-white to-sky-100/70",
@@ -18,8 +18,8 @@ const statsCards = [
     glowClass: "from-sky-300/50 to-sky-100/0",
   },
   {
-    value: "1500+",
-    label: "Problems Solved",
+    value: "8",
+    label: "Core Skill Areas",
     icon: Puzzle,
     cardClass:
       "border-emerald-200/70 bg-linear-to-br from-emerald-50 via-white to-emerald-100/70",
@@ -28,8 +28,8 @@ const statsCards = [
     glowClass: "from-emerald-300/50 to-emerald-100/0",
   },
   {
-    value: "5+",
-    label: "Major Domains",
+    value: "200+",
+    label: "Online Contests",
     icon: Monitor,
     cardClass:
       "border-violet-200/70 bg-linear-to-br from-violet-50 via-white to-violet-100/70",
@@ -51,97 +51,100 @@ const statsCards = [
 
 const technicalSkills = [
   {
-    title: "Programming Languages",
-    description: "C/C++, Python, JavaScript, SQL",
-    proficiency: "Advanced",
+    title: "Languages",
+    description: "C/C++, Python, Go, JavaScript, SQL",
+    proficiency: "5 skills",
     logo: pythonLogo,
     logoAlt: "Python logo",
     cardClass: "border-sky-100 bg-sky-50/70",
     iconClass: "bg-sky-100 text-sky-700",
     badgeClass: "bg-sky-100 text-sky-700",
-    trackClass: "bg-sky-100",
-    fillClass: "bg-sky-500",
-    progressClass: "w-11/12",
   },
   {
-    title: "Backend Development",
-    description: "Django, REST APIs, Authentication",
-    proficiency: "Intermediate",
+    title: "Backend",
+    description: "Django, Django REST Framework, FastAPI, Beego",
+    proficiency: "4 frameworks",
     logo: djangoLogo,
     logoAlt: "Django logo",
     cardClass: "border-emerald-100 bg-emerald-50/70",
     iconClass: "bg-emerald-100 text-emerald-700",
     badgeClass: "bg-emerald-100 text-emerald-700",
-    trackClass: "bg-emerald-100",
-    fillClass: "bg-emerald-500",
-    progressClass: "w-9/12",
   },
   {
-    title: "Database",
-    description: "PostgreSQL, MySQL",
-    proficiency: "Intermediate",
-    logo: postgresqlLogo,
-    logoAlt: "PostgreSQL logo",
-    cardClass: "border-violet-100 bg-violet-50/70",
-    iconClass: "bg-violet-100 text-violet-700",
-    badgeClass: "bg-violet-100 text-violet-700",
-    trackClass: "bg-violet-100",
-    fillClass: "bg-violet-500",
-    progressClass: "w-9/12",
-  },
-  {
-    title: "Frontend Development",
-    description: "React, Tailwind CSS, Bootstrap",
-    proficiency: "Intermediate",
-    logo: reactLogo,
-    logoAlt: "React logo",
-    cardClass: "border-indigo-100 bg-indigo-50/70",
-    iconClass: "bg-indigo-100 text-indigo-700",
-    badgeClass: "bg-indigo-100 text-indigo-700",
-    trackClass: "bg-indigo-100",
-    fillClass: "bg-indigo-500",
-    progressClass: "w-9/12",
-  },
-  {
-    title: "DevOps & Tools",
-    description: "Docker, Linux, Git, GitHub Workflow",
-    proficiency: "Intermediate",
-    logo: dockerLogo,
-    logoAlt: "Docker logo",
-    cardClass: "border-orange-100 bg-orange-50/70",
-    iconClass: "bg-orange-100 text-orange-700",
-    badgeClass: "bg-orange-100 text-orange-700",
-    trackClass: "bg-orange-100",
-    fillClass: "bg-orange-500",
-    progressClass: "w-8/12",
-  },
-  {
-    title: "Machine Learning & AI",
-    description: "PyTorch, Scikit-learn, OpenCV, NumPy, Pandas",
-    proficiency: "Intermediate",
+    title: "AI Engineering",
+    description: "PyTorch, LangChain, LangGraph, CrewAI, RAG, MCP, Mem0, LangSmith",
+    proficiency: "8 technologies",
     logo: pytorchLogo,
     logoAlt: "PyTorch logo",
     cardClass: "border-rose-100 bg-rose-50/70",
     iconClass: "bg-rose-100 text-rose-700",
     badgeClass: "bg-rose-100 text-rose-700",
-    trackClass: "bg-rose-100",
-    fillClass: "bg-rose-500",
-    progressClass: "w-7/12",
+  },
+  {
+    title: "Frontend",
+    description: "Tailwind CSS, Bootstrap, React, Next.js",
+    proficiency: "4 technologies",
+    logo: reactLogo,
+    logoAlt: "React logo",
+    cardClass: "border-indigo-100 bg-indigo-50/70",
+    iconClass: "bg-indigo-100 text-indigo-700",
+    badgeClass: "bg-indigo-100 text-indigo-700",
+  },
+  {
+    title: "Databases & Vector Stores",
+    description: "MySQL, PostgreSQL, Redis, SurrealDB, Qdrant",
+    proficiency: "5 databases",
+    logo: postgresqlLogo,
+    logoAlt: "PostgreSQL logo",
+    cardClass: "border-violet-100 bg-violet-50/70",
+    iconClass: "bg-violet-100 text-violet-700",
+    badgeClass: "bg-violet-100 text-violet-700",
+  },
+  {
+    title: "Infrastructure",
+    description: "Docker, Linux",
+    proficiency: "2 technologies",
+    logo: dockerLogo,
+    logoAlt: "Docker logo",
+    cardClass: "border-orange-100 bg-orange-50/70",
+    iconClass: "bg-orange-100 text-orange-700",
+    badgeClass: "bg-orange-100 text-orange-700",
+  },
+  {
+    title: "Testing",
+    description: "Pytest, Postman, JMeter, Playwright",
+    proficiency: "4 tools",
+    icon: Puzzle,
+    cardClass: "border-teal-100 bg-teal-50/70",
+    iconClass: "bg-teal-100 text-teal-700",
+    badgeClass: "bg-teal-100 text-teal-700",
+  },
+  {
+    title: "Tools",
+    description: "Git, GitHub Workflow, Notion, LaTeX",
+    proficiency: "4 tools",
+    icon: Wrench,
+    cardClass: "border-amber-100 bg-amber-50/70",
+    iconClass: "bg-amber-100 text-amber-700",
+    badgeClass: "bg-amber-100 text-amber-700",
   },
 ];
 
 const otherSkills = [
   "Problem Solving",
   "Data Structures & Algorithms",
+  "AI Agents",
+  "Agent Orchestration",
+  "Prompt Engineering",
+  "RAG Workflows",
   "REST API Design",
-  "Linux Command Line",
-  "Git & GitHub",
-  "LaTeX",
+  "SSE Streaming",
+  "Web Scraping",
+  "Automated Testing",
   "Competitive Programming",
-  "System Programming (C)",
-  "Computer Vision",
+  "POSIX System Programming",
   "Research & Experimentation",
-  "Technical Writing",
+  "Agile Development",
 ];
 
 export default function SkillsSection() {
@@ -159,8 +162,8 @@ export default function SkillsSection() {
                 Skills
               </h1>
               <p className="mt-2.5 max-w-3xl text-[15px] leading-6 text-slate-500 sm:text-base">
-                My tech stack and core competencies that help me build and
-                solve.
+                Technologies and engineering practices I use to build backend,
+                AI, and full-stack systems.
               </p>
             </div>
           </div>
@@ -252,14 +255,6 @@ export default function SkillsSection() {
                     </span>
                   </div>
 
-                  <div
-                    className={`mt-4 h-2 w-full rounded-full ${skill.trackClass}`}
-                  >
-                    <div
-                      className={`h-2 rounded-full ${skill.fillClass} ${skill.progressClass}`}
-                      aria-hidden="true"
-                    />
-                  </div>
                 </article>
               );
             })}

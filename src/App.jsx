@@ -20,7 +20,7 @@ function App() {
         <Route path="skills" element={<SkillsPage />} />
         <Route path="awards-achievements" element={<AwardsAchievementsPage />} />
         <Route path="projects" element={<ProjectsPage />} />
-        <Route path="training-work-experience" element={<TrainingWorkExperiencePage />} />
+        <Route path="education-work-experience" element={<TrainingWorkExperiencePage />} />
         <Route path="certificates" element={<CertificatesPage />} />
         <Route path="research-experience" element={<ResearchExperiencePage />} />
         <Route path="ai-and-ml" element={<AIMLPage />} />
