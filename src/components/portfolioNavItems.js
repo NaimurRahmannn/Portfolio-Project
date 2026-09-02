@@ -3,7 +3,7 @@ const portfolioNavItems = [
     { label: 'Skills', to: '/skills' },
     { label: 'Awards & Achievements', to: '/awards-achievements' },
     { label: 'Projects', to: '/projects' },
-    { label: 'Training & Work Experience', to: '/training-work-experience' },
+    { label: 'Education & Work Experience', to: '/education-work-experience' },
     { label: 'Certificates', to: '/certificates' },
     { label: 'Research Experience', to: '/research-experience' },
     { label: 'AI and ML', to: '/ai-and-ml' },
