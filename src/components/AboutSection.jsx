@@ -1,4 +1,5 @@
 import {
+    Bot,
     Brain,
     Code2,
     Download,
@@ -6,42 +7,41 @@ import {
     Mail,
     Medal,
     Monitor,
-    Trophy,
     Wrench,
 } from 'lucide-react'
 
 const highlightCards = [
     {
-        title: 'Backend',
-        description: 'Python • Django • REST API • PostgreSQL',
+        title: 'Backend & APIs',
+        description: 'Python · Go · Django · FastAPI · Beego',
         icon: Code2,
         cardClass: 'bg-sky-50 border-sky-100',
         iconClass: 'bg-sky-100 text-sky-700',
     },
     {
-        title: 'Frontend',
-        description: 'React • Tailwind CSS • Bootstrap',
-        icon: Monitor,
+        title: 'AI Engineering',
+        description: 'LangGraph · LangChain · CrewAI · RAG · MCP',
+        icon: Bot,
         cardClass: 'bg-emerald-50 border-emerald-100',
         iconClass: 'bg-emerald-100 text-emerald-700',
     },
     {
-        title: 'Tools & DevOps',
-        description: 'Docker • Git • Linux',
-        icon: Wrench,
+        title: 'Frontend',
+        description: 'React · Next.js · Tailwind CSS · Bootstrap',
+        icon: Monitor,
         cardClass: 'bg-violet-50 border-violet-100',
         iconClass: 'bg-violet-100 text-violet-700',
     },
     {
-        title: 'Problem Solving',
-        description: '1500+ Problems Solved • Codeforces Specialist',
-        icon: Trophy,
+        title: 'Infrastructure & Testing',
+        description: 'Docker · Linux · Pytest · Postman · Playwright',
+        icon: Wrench,
         cardClass: 'bg-amber-50 border-amber-100',
         iconClass: 'bg-amber-100 text-amber-700',
     },
     {
-        title: 'Research',
-        description: 'AI / Computer Vision • Model Building & Experimentation',
+        title: 'Problem Solving & Research',
+        description: 'Codeforces Specialist · 1500+ problems · AI/ML research',
         icon: Brain,
         cardClass: 'bg-purple-50 border-purple-100',
         iconClass: 'bg-purple-100 text-purple-700',
@@ -57,22 +57,22 @@ const statsCards = [
         iconClass: 'bg-sky-100 text-sky-700',
     },
     {
-        value: 'Codeforces',
-        label: 'Specialist',
+        value: '200+',
+        label: 'Online Contests',
         icon: Medal,
         cardClass: 'bg-emerald-50 border-emerald-100',
         iconClass: 'bg-emerald-100 text-emerald-700',
     },
     {
-        value: '2+',
-        label: 'Major Projects',
+        value: '3',
+        label: 'Featured Projects',
         icon: FolderOpen,
         cardClass: 'bg-violet-50 border-violet-100',
         iconClass: 'bg-violet-100 text-violet-700',
     },
     {
-        value: 'Research',
-        label: 'in AI / ML',
+        value: 'First Author',
+        label: 'AI / ML Research',
         icon: Brain,
         cardClass: 'bg-amber-50 border-amber-100',
         iconClass: 'bg-amber-100 text-amber-700',
@@ -86,8 +86,8 @@ export default function AboutSection() {
                 <header>
                     <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-2xl">About</h1>
                     <p className="mt-2.5 max-w-3xl text-[15px] leading-6 text-slate-500 sm:text-base">
-                        Backend-focused software engineer passionate about building scalable applications and solving
-                        real-world problems.
+                        Software engineer specializing in backend and AI systems, with experience building scalable
+                        applications, AI agents, and agent orchestration workflows.
                     </p>
                     <div className="mt-4 h-px w-full bg-slate-200" />
                 </header>
@@ -96,25 +96,27 @@ export default function AboutSection() {
                     <div>
                         <div className="space-y-4 text-[15px] leading-6 text-slate-700 sm:text-base">
                             <p>
-                                I am a Computer Science and Engineering student and backend-focused software engineer
-                                with a strong interest in building scalable web applications and solving real-world
-                                problems. My primary stack includes <span className="font-semibold text-sky-700">Python</span>,{' '}
+                                I build scalable backend applications and AI-powered systems using{' '}
+                                <span className="font-semibold text-sky-700">Python</span>,{' '}
+                                <span className="font-semibold text-sky-700">Go</span>,{' '}
+                                <span className="font-semibold text-sky-700">FastAPI</span>,{' '}
                                 <span className="font-semibold text-sky-700">Django</span>,{' '}
-                                <span className="font-semibold text-sky-700">PostgreSQL</span>,{' '}
-                                <span className="font-semibold text-sky-700">React</span>, and{' '}
-                                <span className="font-semibold text-sky-700">Docker</span>.
+                                <span className="font-semibold text-sky-700">LangGraph</span>, and{' '}
+                                <span className="font-semibold text-sky-700">PostgreSQL</span>. My work focuses on REST APIs,
+                                scalable backend systems, AI agents, and agent orchestration workflows.
                             </p>
                             <p>
-                                I enjoy developing practical software, improving backend architecture, and solving
-                                algorithmic challenges. My competitive programming journey, with{' '}
+                                I completed a <span className="font-semibold text-sky-700">Software Engineering Internship at W3 Engineers</span>,
+                                where I worked across Python, Django, Go, Beego, React, and Next.js in a project-based
+                                engineering rotation. As part of the Presto team, I focused on agent orchestration
+                                frameworks and AI agent infrastructure in an Agile environment.
+                            </p>
+                            <p>
+                                Competitive programming has sharpened my analytical thinking through{' '}
                                 <span className="font-semibold text-sky-700">1500+ solved problems</span> and{' '}
-                                <span className="font-semibold text-sky-700">Codeforces Specialist</span>, has
-                                strengthened my analytical thinking and problem-solving ability.
-                            </p>
-                            <p>
-                                I have also worked on research in AI and computer vision, which expanded my skills in
-                                experimentation, model building, and technical problem solving. I am currently looking
-                                for opportunities to grow as a software engineer and contribute to impactful products.
+                                <span className="font-semibold text-sky-700">200+ online contests</span>, earning the
+                                Codeforces Specialist rank. I also conduct machine learning research and am first author
+                                of a submitted study on robust, generalisable polyp segmentation.
                             </p>
                         </div>
 
