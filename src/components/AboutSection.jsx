@@ -64,7 +64,7 @@ const statsCards = [
         iconClass: 'bg-emerald-100 text-emerald-700',
     },
     {
-        value: '3',
+        value: '16',
         label: 'Featured Projects',
         icon: FolderOpen,
         cardClass: 'bg-violet-50 border-violet-100',
