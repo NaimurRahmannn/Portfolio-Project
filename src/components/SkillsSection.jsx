@@ -147,6 +147,8 @@ const otherSkills = [
   "Agile Development",
 ];
 
+const featuredSkillTitles = ["AI Engineering", "Backend", "Frontend"];
+
 export default function SkillsSection() {
   return (
     <section className="mx-auto w-full max-w-305">
@@ -215,8 +217,8 @@ export default function SkillsSection() {
             Core technologies I work with
           </p>
 
-          <div className="mt-4 grid gap-3 sm:gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {technicalSkills.map((skill) => {
+          <div className="mt-4 grid gap-3 sm:gap-4 lg:grid-cols-3">
+            {technicalSkills.filter((skill) => featuredSkillTitles.includes(skill.title)).map((skill) => {
               const Icon = skill.icon;
 
               return (
@@ -255,6 +257,41 @@ export default function SkillsSection() {
                     </span>
                   </div>
 
+                </article>
+              );
+            })}
+          </div>
+        </section>
+
+        <section className="mt-7 border-t border-slate-200 pt-6" aria-label="Supporting technical skills">
+          <h2 className="text-xl font-bold text-slate-900">Supporting Toolkit</h2>
+          <p className="mt-1 text-sm text-slate-500">The tools that help me ship and maintain reliable systems</p>
+
+          <div className="mt-4 grid gap-3 sm:gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {technicalSkills.filter((skill) => !featuredSkillTitles.includes(skill.title)).map((skill) => {
+              const Icon = skill.icon;
+
+              return (
+                <article
+                  key={skill.title}
+                  className={`rounded-2xl border px-4 py-4 ${skill.cardClass}`}
+                >
+                  <div className="flex items-start gap-3">
+                    <div className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl ${skill.iconClass}`}>
+                      {skill.logo ? (
+                        <img src={skill.logo} alt={skill.logoAlt} className="h-6 w-6 object-contain" />
+                      ) : (
+                        <Icon size={18} />
+                      )}
+                    </div>
+                    <div className="min-w-0">
+                      <h3 className="text-[15px] font-bold text-slate-900">{skill.title}</h3>
+                      <p className="mt-1 text-[13px] leading-5 text-slate-600">{skill.description}</p>
+                      <span className={`mt-2 inline-flex rounded-full px-2.5 py-1 text-[11px] font-semibold ${skill.badgeClass}`}>
+                        {skill.proficiency}
+                      </span>
+                    </div>
+                  </div>
                 </article>
               );
             })}
