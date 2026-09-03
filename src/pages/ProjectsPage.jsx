@@ -71,6 +71,91 @@ const projects = [
         language: '',
         technologies: ['Python','CrewAI','Gemini CLI','Groq','Pydantic','html5lib','tinycss2'],
     },
+    {
+        category: 'Backend Projects',
+        name: 'Stalker-A-Unified-Competitive-Profile',
+        href: 'https://github.com/NaimurRahmannn/Stalker-A-Unified-Competitive-Profile',
+        description: "STALKER is a technical growth dashboard that unifies a developer's scattered activity — competitive programming, data science, cybersecurity, and hackathons — into one shareable profile. Users connect handles from platforms like Codeforces, AtCoder, Kaggle, CTFtime, and Devpost, and STALKER syncs and normalizes their progress over time: ratings, consistency, milestones, and growth. The current build covers a full Codeforces flow (register, connect, sync, view) plus AtCoder rating and submission ingestion, with more platforms planned. The goal: one developer identity that reflects an actual technical journey, not just a resume line.",
+        language: '',
+        technologies: ['Django REST Framework', 'djangorestframework-simplejwt', 'PostgreSQL', 'Next.js', 'Tailwind CSS'],
+    },
+    {
+        category: 'Backend Projects',
+        name: 'My-own-shell-for-Linux-OS-Mshx',
+        href: 'https://github.com/NaimurRahmannn/My-own-shell-for-Linux-OS-Mshx',
+        description: 'MshX is a Unix shell built from scratch in C — with a handwritten tokenizer, parser, AST, and executor rather than relying on existing libraries. It supports pipelines, logical operators, I/O redirection, glob/variable expansion, background jobs, and command history, plus extras like a dry-run preview mode and a millisecond-precision timeline profiler for tracing process events. Built with just GCC and GNU Make on POSIX APIs, it\'s both a working shell and a look under the hood at how shells work.',
+        language: '',
+        technologies: ['C','Linux','GNU Make'],
+    },
+    {
+        category: 'Backend Projects',
+        name: 'Ecommerce-sites-with-Django',
+        href: 'https://github.com/NaimurRahmannn/Ecommerce-sites-with-Django',
+        demoUrl: 'https://haatify.onrender.com/',
+        description: 'Haatify is a clean, responsive e-commerce storefront designed for fashion retail. It supports product browsing by categories (Men & Women), shopping cart management, order checkout with multiple payment options, user authentication, and an admin dashboard for managing inventory.',
+        language: '',
+        technologies: ['Django','PostgreSQL','Cloudinary','WhiteNoise','Bootstrap'],
+    },
+    {
+        category: 'Backend Projects',
+        name: 'Kash-An-Expense-Tracker',
+        href: 'https://github.com/NaimurRahmannn/Kash-An-Expense-Tracker',
+        demoUrl: 'https://kash-an-expense-tracker.vercel.app/',
+        description: 'A personal expense tracker built for the internship assignment, with a Go + Beego backend, CSV-based local storage, optional Postgres production storage, and a Next.js frontend with dashboard, expense management, and voice input feature.',
+        language: '',
+        technologies: ['GO','Beego','Next.js','TypeScript','Postgres'],
+    },
+    {
+        category: 'Backend Projects',
+        name: 'TravelSphere',
+        href: 'https://github.com/NaimurRahmannn/TravelSphere',
+        description: "A destination discovery and trip-planning app built with the Beego framework (Go). You can browse countries, dig into a destination's details and nearby attractions, and keep a personal travel wishlist with planned/visited status.",
+        language: '',
+        technologies: ['Go', 'Beego'],
+    },
+    {
+        category: 'Backend Projects',
+        name: 'Property_Management_System',
+        href: 'https://github.com/NaimurRahmannn/Property_Management_System',
+        description: 'A vacation-rental platform blending classic location search with AI-powered semantic search — type "beach vacation" and get relevant results without exact keyword matches. Built with Django, GeoDjango/PostGIS, and pgvector (Sentence Transformers embeddings) for precise distance calculations, all Dockerized for one-command setup.',
+        language: '',
+        technologies: ['Django, Django REST Framework','GeoDjango + PostGIS','pgvector + Sentence Transformers','PostgreSQL'],
+    },
+    {
+        category: 'Backend Projects',
+        name: 'SEO-Audit-Tool-FastAPI',
+        href: 'https://github.com/NaimurRahmannn/SEO-Audit-Tool-FastAPI',
+        demoUrl: 'https://seo-audit-tool-rosy-two.vercel.app/',
+        description: "The SEO Audit Tool lets you paste a URL and get a clear, graded report of its on-page SEO health. It's built for developers, marketers, and site owners who want a fast, no-signup snapshot of what a page does well and what to fix.",
+        language: '',
+        technologies: ['FastAPI','PostgreSQL','BeautifulSoup','Lighthouse','Next.js','TypeScript','Tailwind CSS'],
+    },
+    {
+        category: 'Frontend Projects',
+        name: 'Kenakata-ecommerce-storefront-Next.js-',
+        href: 'https://github.com/NaimurRahmannn/Kenakata-ecommerce-storefront-Next.js-',
+        demoUrl: 'https://kenakata-ecommerce-storefront-next-js.onrender.com/',
+        description: 'A production-style e-commerce storefront built with Next.js App Router, TypeScript, and Tailwind CSS, powered by the Platzi Fake Store API. Polished browse → details → cart → checkout flow with client-side auth, cart, and wishlist state — no custom backend.',
+        language: '',
+        technologies: ['Next.js','React','TypeScript','Tailwind CSS','Zustand'],
+    },
+    {
+        category: 'Frontend Projects',
+        name: 'Travels_Property',
+        href: 'https://github.com/NaimurRahmannn/w3assignment-02-Internship-',
+        demoUrl: 'https://w3assignment-02-internship.onrender.com/',
+        description: 'A Node/Express property detail page (internship assignment) featuring an image gallery, expandable description, a check-in/check-out date picker with price calculation, Google Maps integration, and a nearby-properties list served via a simple /get-property API — built with plain HTML/CSS/JS and a responsive layout.',
+        language: '',
+        technologies: ['HTML','CSS','JS','Node','Express.js'],
+    },
+    {
+        category: 'Frontend Projects',
+        name: 'Amazon_Clone-HTML-CSS',
+        href: 'https://github.com/NaimurRahmannn/Amazon_Clone-HTML-CSS',
+        description: 'A front-end clone of the Amazon website built using HTML and CSS. This project is focused on replicating the design, layout, and responsive structure of the Amazon homepage for learning and practice purposes.',
+        language: '',
+        technologies: ['HTML','CSS'],
+    },
 ]
 
 const projectSections = ['AI Engineering Projects', 'Backend Projects', 'Frontend Projects']
@@ -89,7 +174,7 @@ export default function ProjectsPage() {
                         </div>
                         <h1 className="mt-3 text-2xl font-bold tracking-tight text-slate-900">Projects</h1>
                         <p className="mt-1 max-w-2xl text-sm leading-6 text-slate-600">
-                            Selected repositories and experiments across backend, AI engineering, and frontend development.
+                            A collection of projects I built across AI engineering, backend systems, and frontend development.
                         </p>
                 </div>
                 </div>
@@ -108,7 +193,7 @@ export default function ProjectsPage() {
                 {projectSections.map((section) => {
                     const sectionProjects = projects.filter((project) => project.category === section)
 
-                    if (sectionProjects.length === 0 && section !== 'Backend Projects') return null
+                    if (sectionProjects.length === 0 && !['Backend Projects', 'Frontend Projects'].includes(section)) return null
 
                     return (
                         <section key={section} className="mt-6 first:mt-5" aria-labelledby={section}>
@@ -169,7 +254,7 @@ export default function ProjectsPage() {
                                     </article>
                                 ))}
                             </div>
-                            {sectionProjects.length === 0 && <p className="rounded-md border border-dashed border-slate-300 px-5 py-6 text-sm text-slate-500">Backend projects will appear here.</p>}
+                            {sectionProjects.length === 0 && <p className="rounded-md border border-dashed border-slate-300 px-5 py-6 text-sm text-slate-500">{section} will appear here.</p>}
                         </section>
                     )
                 })}
