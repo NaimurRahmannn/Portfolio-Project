@@ -70,7 +70,7 @@ function AchievementSection({ title, description, items }) {
                 {items.map((item) => (
                     <article
                         key={item.title}
-                        className="grid gap-x-6 gap-y-1 border-b border-slate-100 py-3 last:border-b-0 sm:grid-cols-[minmax(0,1fr)_auto]"
+                        className="grid min-w-0 gap-x-6 gap-y-1 border-b border-slate-100 py-3 last:border-b-0 sm:grid-cols-[minmax(0,1fr)_minmax(0,12rem)]"
                     >
                         <div>
                             {item.href ? (
@@ -89,7 +89,7 @@ function AchievementSection({ title, description, items }) {
                             )}
                             <p className="mt-1 text-sm leading-5 text-slate-600">{item.detail}</p>
                         </div>
-                        <p className="text-sm font-semibold text-sky-700 sm:text-right">{item.achievement}</p>
+                        <p className="wrap-break-word text-sm font-semibold text-sky-700 sm:text-right">{item.achievement}</p>
                     </article>
                 ))}
             </div>

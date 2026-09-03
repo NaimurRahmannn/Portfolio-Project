@@ -42,10 +42,10 @@ export default function CertificatesPage() {
 
             <div className="divide-y divide-slate-200">
                 {certificates.map((certificate) => (
-                    <article key={certificate.title} className="py-6 first:pb-6 last:pb-1">
+                    <article key={certificate.title} className="min-w-0 py-6 first:pb-6 last:pb-1">
                         <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
                             <div>
-                                <h2 className="text-lg font-semibold text-slate-900">{certificate.title}</h2>
+                                <h2 className="break-words text-lg font-semibold text-slate-900">{certificate.title}</h2>
                                 <p className="mt-1 text-sm font-medium text-slate-500">
                                     {certificate.period}
                                     {certificate.status && <span className="ml-2 rounded-full bg-amber-50 px-2.5 py-1 text-xs font-semibold text-amber-700">{certificate.status}</span>}

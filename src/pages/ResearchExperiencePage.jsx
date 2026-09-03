@@ -35,7 +35,7 @@ export default function ResearchExperiencePage() {
                 {researchItems.map((item) => (
                     <article key={item.title} className="py-6 last:pb-1">
                         <p className="text-sm font-medium text-slate-500">{item.period}</p>
-                        <h2 className="mt-2 text-lg font-semibold leading-7 text-slate-900">{item.title}</h2>
+                        <h2 className="mt-2 break-words text-lg font-semibold leading-7 text-slate-900">{item.title}</h2>
                         <p className="mt-1 text-sm italic text-slate-600">{item.context}</p>
                         <p className="mt-4 text-sm leading-6 text-slate-600">{item.summary}</p>
                         <h3 className="mt-5 text-sm font-semibold uppercase tracking-[0.15em] text-slate-500">Research Contributions & Findings</h3>

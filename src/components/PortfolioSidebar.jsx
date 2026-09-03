@@ -20,10 +20,10 @@ export default function PortfolioSidebar({
     ]
 
     return (
-        <aside className="w-full max-w-85 border-r border-white/10 bg-[#15263f] px-7 py-10 text-slate-100 shadow-[18px_0_40px_rgba(2,8,23,0.3)] sm:px-8 lg:sticky lg:top-0 lg:h-screen lg:self-start lg:overflow-y-auto">
-            <div className="flex min-h-[calc(100vh-5rem)] flex-col pt-10 sm:pt-12">
-                <div className="flex flex-col items-center text-center">
-                    <div className="h-28 w-28 overflow-hidden rounded-full border-2 border-slate-200/80 p-1 shadow-[0_10px_30px_rgba(2,8,23,0.35)]">
+        <aside className="w-full max-w-none border-b border-white/10 bg-[#15263f] px-4 py-4 text-slate-100 shadow-[0_10px_30px_rgba(2,8,23,0.22)] sm:px-8 sm:py-6 lg:sticky lg:top-0 lg:max-w-85 lg:border-b-0 lg:border-r lg:px-7 lg:py-10 lg:shadow-[18px_0_40px_rgba(2,8,23,0.3)] lg:min-h-screen lg:self-stretch lg:overflow-y-auto">
+            <div className="flex min-h-0 flex-col pt-0 sm:pt-2 lg:min-h-[calc(100vh-5rem)] lg:pt-10">
+                <div className="flex flex-wrap items-center gap-3 text-left lg:flex-col lg:items-center lg:text-center">
+                    <div className="h-16 w-16 shrink-0 overflow-hidden rounded-full border-2 border-slate-200/80 p-1 shadow-[0_10px_30px_rgba(2,8,23,0.35)] lg:h-28 lg:w-28">
                     <img
                         src={profileImage}
                         alt="Naimur Rahman Lam"
@@ -31,10 +31,12 @@ export default function PortfolioSidebar({
                     />
                 </div>
 
-                    <h2 className="mt-4 text-2xl font-semibold tracking-wide">Naimur Rahman Lam</h2>
-                    <p className="mt-1 text-sm text-slate-300">Backend & AI Software Engineer</p>
+                    <div className="min-w-0 lg:w-full">
+                    <h2 className="text-lg font-semibold tracking-wide sm:text-xl lg:mt-4 lg:text-2xl">Naimur Rahman Lam</h2>
+                    <p className="mt-0.5 text-xs text-slate-300 sm:text-sm lg:mt-1">Backend & AI Software Engineer</p>
+                    </div>
 
-                    <div className="mt-5 grid w-full max-w-52 grid-cols-4 gap-1">
+                    <div className="ml-auto grid w-40 max-w-full grid-cols-4 gap-1 lg:mt-5 lg:ml-0 lg:w-full lg:max-w-52">
                         {socialLinks.map((item) => {
                             return (
                                 <a
@@ -60,7 +62,7 @@ export default function PortfolioSidebar({
                     </div>
                 </div>
 
-                <div id="contact" className="mt-8 space-y-3 border-t border-white/15 pt-6 text-sm text-slate-300">
+                <div id="contact" className="mt-4 flex flex-wrap gap-x-4 gap-y-2 border-t border-white/15 pt-3 text-xs text-slate-300 sm:text-sm lg:mt-8 lg:block lg:space-y-3 lg:pt-6">
                     <div className="flex items-center gap-3">
                         <Mail size={16} className="text-slate-400" />
                         <a href={`mailto:${email}`} className="truncate transition-colors hover:text-white">

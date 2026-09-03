@@ -216,12 +216,12 @@ export default function ProjectsPage() {
                                         }}
                                         className="block cursor-pointer rounded-md transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500"
                                     >
-                                        <div className="h-full rounded-md border border-slate-300 p-5 transition-colors hover:border-slate-500">
-                                        <div className="flex items-start justify-between gap-3">
-                                            <span className="break-all text-base font-semibold text-sky-700 group-hover:underline">{project.name}</span>
+                                        <div className="h-full min-w-0 rounded-md border border-slate-300 p-5 transition-colors hover:border-slate-500">
+                                        <div className="flex min-w-0 items-start justify-between gap-3">
+                                            <span className="min-w-0 break-all text-base font-semibold text-sky-700 group-hover:underline">{project.name}</span>
                                                 {project.demoUrl && <a href={project.demoUrl} target="_blank" rel="noreferrer" onClick={(event) => event.stopPropagation()} className="shrink-0 rounded-md bg-emerald-600 px-2.5 py-1 text-[11px] font-semibold text-white hover:bg-emerald-700">Live demo</a>}
                                         </div>
-                                        {project.description && <p className="mt-2 min-h-12 whitespace-pre-line text-sm leading-5 text-slate-600">{project.description}</p>}
+                                        {project.description && <p className="mt-2 min-h-12 break-words whitespace-pre-line text-sm leading-5 text-slate-600">{project.description}</p>}
                                         {project.highlights && (
                                             <>
                                                 <button

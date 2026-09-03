@@ -92,7 +92,7 @@ const technicalSkills = [
   },
   {
     title: "Databases & Vector Stores",
-    description: "MySQL, PostgreSQL, Redis, SurrealDB, Qdrant",
+    description: "MySQL, PostgreSQL, Redis, Qdrant",
     proficiency: "5 databases",
     logo: postgresqlLogo,
     logoAlt: "PostgreSQL logo",
@@ -160,7 +160,7 @@ export default function SkillsSection() {
               aria-hidden="true"
             />
             <div>
-              <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-2xl">
+              <h1 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
                 Skills
               </h1>
               <p className="mt-2.5 max-w-3xl text-[15px] leading-6 text-slate-500 sm:text-base">

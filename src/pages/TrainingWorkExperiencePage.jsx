@@ -56,9 +56,9 @@ export default function TrainingWorkExperiencePage() {
                             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">{item.type}</p>
                             <p className="mt-2 text-sm font-medium text-slate-700">{item.period}</p>
                         </div>
-                        <div className={item.certificate ? 'grid gap-5 md:grid-cols-[minmax(0,1fr)_7rem] md:items-start' : ''}>
-                            <div>
-                                <h3 className="text-lg font-semibold text-slate-900">{item.title}</h3>
+                        <div className={item.certificate ? 'grid min-w-0 gap-5 md:grid-cols-[minmax(0,1fr)_7rem] md:items-start' : 'min-w-0'}>
+                            <div className="min-w-0">
+                                <h3 className="break-words text-lg font-semibold text-slate-900">{item.title}</h3>
                                 <div className="mt-1 flex flex-wrap gap-x-2 text-sm text-slate-600">
                                     <span>{item.organization}</span>
                                     <span aria-hidden="true">&middot;</span>
