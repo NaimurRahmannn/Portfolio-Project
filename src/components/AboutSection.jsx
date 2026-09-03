@@ -12,7 +12,7 @@ import {
 
 const highlightCards = [
     {
-        title: 'Backend & APIs',
+        title: 'Backend',
         description: 'Python · Go · Django · FastAPI · Beego',
         icon: Code2,
         cardClass: 'bg-sky-50 border-sky-100',
