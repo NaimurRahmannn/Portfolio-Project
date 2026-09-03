@@ -21,7 +21,7 @@ const experienceItems = [
         title: '(Django) Web Development Training',
         organization: 'Bangladesh Computer Council (EDGE)',
         location: 'Bangladesh',
-        period: '2025',
+        period: 'March 2025 - Sep 2025',
         certificate: trainingCertificate,
         certificateAlt: 'Bangladesh Computer Council web development training certificate',
         details: [

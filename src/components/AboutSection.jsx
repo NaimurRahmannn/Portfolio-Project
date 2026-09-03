@@ -121,21 +121,22 @@ export default function AboutSection() {
                         </div>
 
                         <div className="mt-5 flex flex-wrap gap-3">
-                            <button
-                                type="button"
+                            <a
+                                href="/NaimurRahmanLamCV.pdf"
+                                download="NaimurRahmanLamCV.pdf"
                                 className="inline-flex h-10.5 items-center gap-2 rounded-xl bg-[#162b46] px-5 text-sm font-semibold text-white shadow-[0_8px_18px_rgba(22,43,70,0.22)] transition-colors duration-200 hover:bg-[#1d3656]"
                             >
                                 <Download size={17} />
                                 <span>Download CV</span>
-                            </button>
+                            </a>
 
-                            <button
-                                type="button"
+                            <a
+                                href="mailto:naimurrahmanlamm@gmail.com"
                                 className="inline-flex h-10.5 items-center gap-2 rounded-xl border border-slate-300 bg-white px-5 text-sm font-semibold text-slate-700 transition-colors duration-200 hover:bg-slate-50"
                             >
                                 <Mail size={17} />
                                 <span>Contact Me</span>
-                            </button>
+                            </a>
                         </div>
                     </div>
 

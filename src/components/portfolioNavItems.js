@@ -6,7 +6,6 @@ const portfolioNavItems = [
     { label: 'Education & Work Experience', to: '/education-work-experience' },
     { label: 'Certificates', to: '/certificates' },
     { label: 'Research Experience', to: '/research-experience' },
-    { label: 'AI and ML', to: '/ai-and-ml' },
 ]
 
 export default portfolioNavItems

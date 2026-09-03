@@ -9,7 +9,6 @@ import ProjectsPage from './pages/ProjectsPage'
 import TrainingWorkExperiencePage from './pages/TrainingWorkExperiencePage'
 import CertificatesPage from './pages/CertificatesPage'
 import ResearchExperiencePage from './pages/ResearchExperiencePage'
-import AIMLPage from './pages/AIMLPage'
 
 function App() {
   return (
@@ -23,7 +22,6 @@ function App() {
         <Route path="education-work-experience" element={<TrainingWorkExperiencePage />} />
         <Route path="certificates" element={<CertificatesPage />} />
         <Route path="research-experience" element={<ResearchExperiencePage />} />
-        <Route path="ai-and-ml" element={<AIMLPage />} />
       </Route>
 
       <Route path="*" element={<Navigate to="/about" replace />} />
