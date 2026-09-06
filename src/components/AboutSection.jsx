@@ -85,9 +85,6 @@ export default function AboutSection() {
             <article className="rounded-[28px] border border-slate-200/80 bg-white px-6 py-6 shadow-[0_14px_36px_rgba(15,23,42,0.08)] sm:px-8 sm:py-7 lg:px-9 lg:py-8">
                 <header>
                     <h1 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">About</h1>
-                    <p className="mt-2.5 max-w-3xl text-[15px] leading-6 text-slate-500 sm:text-base">
-                        AI Backend Engineer focused on reliable backend systems and AI-powered applications.
-                    </p>
                     <div className="mt-4 h-px w-full bg-slate-200" />
                 </header>
 
@@ -95,24 +92,13 @@ export default function AboutSection() {
                     <div>
                         <div className="space-y-4 text-[15px] leading-6 text-slate-700 sm:text-base">
                             <p>
-                                I am an <span className="font-semibold text-sky-700">AI Backend Engineer</span> focused on building reliable backend systems and AI-powered applications. I specialize in developing scalable APIs, agentic workflows, and LLM-based systems using{' '}
-                                <span className="font-semibold text-sky-700">Python</span>,{' '}
-                                <span className="font-semibold text-sky-700">Go</span>,{' '}
-                                <span className="font-semibold text-sky-700">FastAPI</span>,{' '}
-                                <span className="font-semibold text-sky-700">Django</span>,{' '}
-                                <span className="font-semibold text-sky-700">LangGraph</span>, and{' '}
-                                <span className="font-semibold text-sky-700">CrewAI</span>,{' '}
-                                <span className="font-semibold text-sky-700">PostgreSQL</span>, and{' '}
-                                <span className="font-semibold text-sky-700">MCP</span>. My work focuses on the intersection of backend engineering and AI systems, including REST APIs, AI agents, multi-agent orchestration workflows, retrieval pipelines, and production-oriented applications.
+                                AI Backend Engineer focused on building reliable backend systems and LLM-powered applications. Experienced in developing scalable APIs, AI agent workflows, RAG systems, and intelligent software solutions using Python, FastAPI, Django, Go, PostgreSQL, and modern AI frameworks.
                             </p>
                             <p>
-                                I completed a <span className="font-semibold text-sky-700">Software Engineering Internship at W3 Engineers</span>, where I went through a project-based engineering rotation covering Python, Django, Flask, FastAPI, Go/Beego, automation, and modern development practices. Later, I worked with the agent orchestration workflow team under mentorship, applying these concepts to build AI agent systems and workflow-based applications.
+                                Completed a Software Engineering Internship at W3 Engineers, gaining hands-on experience in backend development, automation, and AI agent workflows through structured engineering training, team mentorship, and iterative project development.
                             </p>
                             <p>
-                                Outside of engineering, I am a competitive programmer with{' '}
-                                <span className="font-semibold text-sky-700">1500+ solved problems</span> and{' '}
-                                <span className="font-semibold text-sky-700">200+ programming contests</span>, achieving the Codeforces Specialist rank. I also have machine learning research experience as the{' '}
-                                <span className="font-semibold text-sky-700">first author</span> of a submitted study on robust generalisable polyp segmentation.
+                                Strong foundation in software engineering and algorithmic problem solving, with 1500+ competitive programming problems solved and Codeforces Specialist rating. Focused on building practical AI systems with reliable architecture, structured workflows, and maintainable engineering practices.
                             </p>
                         </div>
 
