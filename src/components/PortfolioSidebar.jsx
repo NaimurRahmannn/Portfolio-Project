@@ -7,9 +7,9 @@ export default function PortfolioSidebar({
     profileImage = '/profile.jpg',
     email = 'naimurrahmanlamm@gmail.com',
     location = 'Dhaka, Bangladesh',
-    linkedinUrl = '#',
-    githubUrl = '#',
-    mediumUrl = '#',
+    linkedinUrl = 'https://www.linkedin.com/in/niamur-rahman--/',
+    githubUrl = 'https://github.com/NaimurRahmannn',
+    mediumUrl = 'https://medium.com/@naimurrahmanlamm',
     youtubeUrl = '#',
 }) {
     const socialLinks = [

@@ -86,8 +86,7 @@ export default function AboutSection() {
                 <header>
                     <h1 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">About</h1>
                     <p className="mt-2.5 max-w-3xl text-[15px] leading-6 text-slate-500 sm:text-base">
-                        Software engineer specializing in backend and AI systems, with experience building scalable
-                        applications, AI agents, and agent orchestration workflows.
+                        AI Backend Engineer focused on reliable backend systems and AI-powered applications.
                     </p>
                     <div className="mt-4 h-px w-full bg-slate-200" />
                 </header>
@@ -96,27 +95,24 @@ export default function AboutSection() {
                     <div>
                         <div className="space-y-4 text-[15px] leading-6 text-slate-700 sm:text-base">
                             <p>
-                                I build scalable backend applications and AI-powered systems using{' '}
+                                I am an <span className="font-semibold text-sky-700">AI Backend Engineer</span> focused on building reliable backend systems and AI-powered applications. I specialize in developing scalable APIs, agentic workflows, and LLM-based systems using{' '}
                                 <span className="font-semibold text-sky-700">Python</span>,{' '}
                                 <span className="font-semibold text-sky-700">Go</span>,{' '}
                                 <span className="font-semibold text-sky-700">FastAPI</span>,{' '}
                                 <span className="font-semibold text-sky-700">Django</span>,{' '}
                                 <span className="font-semibold text-sky-700">LangGraph</span>, and{' '}
-                                <span className="font-semibold text-sky-700">PostgreSQL</span>. My work focuses on REST APIs,
-                                scalable backend systems, AI agents, and agent orchestration workflows.
+                                <span className="font-semibold text-sky-700">CrewAI</span>,{' '}
+                                <span className="font-semibold text-sky-700">PostgreSQL</span>, and{' '}
+                                <span className="font-semibold text-sky-700">MCP</span>. My work focuses on the intersection of backend engineering and AI systems, including REST APIs, AI agents, multi-agent orchestration workflows, retrieval pipelines, and production-oriented applications.
                             </p>
                             <p>
-                                I completed a <span className="font-semibold text-sky-700">Software Engineering Internship at W3 Engineers</span>,
-                                where I worked across Python, Django, Go, Beego, React, and Next.js in a project-based
-                                engineering rotation. As part of the Presto team, I focused on agent orchestration
-                                frameworks and AI agent infrastructure in an Agile environment.
+                                I completed a <span className="font-semibold text-sky-700">Software Engineering Internship at W3 Engineers</span>, where I went through a project-based engineering rotation covering Python, Django, Flask, FastAPI, Go/Beego, automation, and modern development practices. Later, I worked with the agent orchestration workflow team under mentorship, applying these concepts to build AI agent systems and workflow-based applications.
                             </p>
                             <p>
-                                Competitive programming has sharpened my analytical thinking through{' '}
+                                Outside of engineering, I am a competitive programmer with{' '}
                                 <span className="font-semibold text-sky-700">1500+ solved problems</span> and{' '}
-                                <span className="font-semibold text-sky-700">200+ online contests</span>, earning the
-                                Codeforces Specialist rank. I also conduct machine learning research and am first author
-                                of a submitted study on robust, generalisable polyp segmentation.
+                                <span className="font-semibold text-sky-700">200+ programming contests</span>, achieving the Codeforces Specialist rank. I also have machine learning research experience as the{' '}
+                                <span className="font-semibold text-sky-700">first author</span> of a submitted study on robust generalisable polyp segmentation.
                             </p>
                         </div>
 
