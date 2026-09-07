@@ -25,7 +25,7 @@ const experienceItems = [
         certificate: trainingCertificate,
         certificateAlt: 'Bangladesh Computer Council web development training certificate',
         details: [
-            'Completed a 3-month, 80-hour hands-on training in Django, backend development, REST APIs, and database integration.',
+            'Completed a 6-month hands-on training in Django, backend development, REST APIs, and database integration.',
         ],
     },
     {
