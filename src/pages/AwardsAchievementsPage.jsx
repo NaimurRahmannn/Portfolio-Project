@@ -42,6 +42,11 @@ const hackathons = [
         achievement: 'Participant',
         detail: 'Preliminary Contest',
     },
+    {
+        title: 'BUP CSE Fest Hackathon 2026',
+        href: 'https://github.com/NaimurRahmannn/BUP_CSE_FEST_HACKATHON_2026',
+        achievement: 'Participant',
+    },
 ]
 
 const datathons = [
