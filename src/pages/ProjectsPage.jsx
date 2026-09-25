@@ -156,9 +156,25 @@ const projects = [
         language: '',
         technologies: ['HTML','CSS'],
     },
+    {
+        category: 'Devops and Cloud',
+        name: 'okcomputerstuff-aws-infrastructure',
+        href: 'https://github.com/NaimurRahmannn/okcomputerstuff-aws-infrastructure',
+        description: 'Infrastructure as Code (IaC) repository for provisioning and managing AWS cloud resources.',
+        language: '',
+        technologies: ['AWS', 'Terraform', 'DevOps'],
+    },
+    {
+        category: 'Devops and Cloud',
+        name: 'Devops-Practice-Lab',
+        href: 'https://github.com/NaimurRahmannn/Devops-Practice-Lab',
+        description: 'A hands-on DevOps practice lab for building CI/CD pipelines, Docker containers, Kubernetes deployments, monitoring, automation scripts, and Terraform infrastructure.',
+        language: '',
+        technologies: ['Docker', 'Kubernetes', 'CI/CD', 'Terraform'],
+    },
 ]
 
-const projectSections = ['AI Engineering Projects', 'Backend Projects', 'Frontend Projects']
+const projectSections = ['AI Engineering Projects', 'Backend Projects', 'Frontend Projects', 'Devops and Cloud']
 
 export default function ProjectsPage() {
     const [expandedProject, setExpandedProject] = useState(null)
@@ -193,7 +209,7 @@ export default function ProjectsPage() {
                 {projectSections.map((section) => {
                     const sectionProjects = projects.filter((project) => project.category === section)
 
-                    if (sectionProjects.length === 0 && !['Backend Projects', 'Frontend Projects'].includes(section)) return null
+                    if (sectionProjects.length === 0 && !['Backend Projects', 'Frontend Projects', 'Devops and Cloud'].includes(section)) return null
 
                     return (
                         <section key={section} className="mt-6 first:mt-5" aria-labelledby={section}>

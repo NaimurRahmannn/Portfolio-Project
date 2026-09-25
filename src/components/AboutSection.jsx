@@ -92,7 +92,7 @@ export default function AboutSection() {
                     <div>
                         <div className="space-y-4 text-[15px] leading-6 text-slate-700 sm:text-base">
                             <p>
-                                AI Backend Engineer focused on building reliable backend systems and LLM-powered applications. Experienced in developing scalable APIs, AI agent workflows, RAG systems, and intelligent software solutions using Python, FastAPI, Django, Go, PostgreSQL, and modern AI frameworks.
+                               Software Engineer focused on building reliable backend systems and LLM-powered applications. Experienced in developing scalable APIs, AI agent workflows, RAG systems, and intelligent software solutions using Python, FastAPI, Django, Go, PostgreSQL, and modern AI frameworks.
                             </p>
                             <p>
                                 Completed a Software Engineering Internship at W3 Engineers, gaining hands-on experience in backend development, automation, and AI agent workflows through structured engineering training, team mentorship, and iterative project development.
