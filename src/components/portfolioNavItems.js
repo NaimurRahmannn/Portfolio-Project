@@ -1,11 +1,13 @@
+import { Award, BriefcaseBusiness, FlaskConical, FolderOpen, Trophy, UserRound, Wrench } from 'lucide-react'
+
 const portfolioNavItems = [
-    { label: 'About', to: '/about' },
-    { label: 'Skills', to: '/skills' },
-    { label: 'Awards & Achievements', to: '/awards-achievements' },
-    { label: 'Projects', to: '/projects' },
-    { label: 'Education & Work Experience', to: '/education-work-experience' },
-    { label: 'Certificates', to: '/certificates' },
-    { label: 'Research Experience', to: '/research-experience' },
+    { label: 'About', id: 'about', icon: UserRound },
+    { label: 'Skills', id: 'skills', icon: Wrench },
+    { label: 'Achievements', id: 'awards-achievements', icon: Trophy },
+    { label: 'Experience', id: 'education-work-experience', icon: BriefcaseBusiness },
+    { label: 'Projects', id: 'projects', icon: FolderOpen },
+    { label: 'Research', id: 'research-experience', icon: FlaskConical },
+    { label: 'Certificates', id: 'certificates', icon: Award },
 ]
 
 export default portfolioNavItems

@@ -1,5 +1,5 @@
-import { BookMarked } from 'lucide-react'
-import { useState } from 'react'
+import { ChevronDown, ExternalLink } from 'lucide-react'
+import SectionHeading from '../components/SectionHeading'
 
 const projects = [
     {
@@ -24,6 +24,7 @@ const projects = [
         category: 'AI Engineering Projects',
         name: 'Archittecture-vs-Data-Harmonization-for-generalisable-Polyp-Segmentation',
         href: 'https://github.com/NaimurRahmannn/Archittecture-vs-Data-Harmonization-for-generalisable-Polyp-Segmentation',
+        demoUrl: 'https://huggingface.co/spaces/NaimurRahmann/polyp_segmentation_m2b_model',
         description: 'Codebase for a research-based project on robust polyp segmentation under centre shift and sequence shift.\n\nPrimary question: Does model architecture (especially cross-attention skip fusion) improve out-of-distribution generalisation more than data harmonization-oriented selection strategies such as SeqVal?',
         language: '',
         technologies: ['Python','PyTorch','Kvasir-SEG dataset', 'EndoCV dataset'],
@@ -57,11 +58,17 @@ const projects = [
     },
     {
         category: 'AI Engineering Projects',
-        name: 'foundry-AI-Agent-CrewAI-',
-        href: 'https://github.com/NaimurRahmannn/foundry-AI-Agent-CrewAI-',
-        description: 'A classic Python/YAML CrewAI project for generating product requirements, technical architecture, draft plans, quality reviews, and final product plans.',
-        language: '',
-        technologies: ['Python','CrewAI','Groq'],
+        name: 'sales-insight-agent',
+        href: 'https://github.com/NaimurRahmannn/sales-insight-agent',
+        description: 'An AI-powered sales intelligence platform combining interactive business dashboards, machine learning forecasting, and natural-language analytics. A LangGraph agent answers revenue, profitability, regional, product, and forecast questions through controlled tools backed by PostgreSQL data.',
+        highlights: [
+            'Built a data cleaning and feature-engineering pipeline for analysis-ready sales data.',
+            'Developed an XGBoost monthly revenue forecast that outperformed the baseline model.',
+            'Created deterministic LangGraph tools for sales, category, regional, forecast, and business-insight queries.',
+            'Persisted multi-user chat sessions in PostgreSQL for reliable conversation history.',
+            'Delivered the analytics experience through Streamlit and Power BI dashboards.',
+        ],
+        technologies: ['Python', 'LangGraph', 'LangChain', 'PostgreSQL', 'XGBoost', 'Streamlit', 'Power BI'],
     },
     {
         category: 'AI Engineering Projects',
@@ -70,6 +77,19 @@ const projects = [
         description: 'A conversational CLI editing agent built with CrewAI, Python, Pydantic, Groq, deterministic HTML/CSS syntax validation (html5lib & tinycss2), patch preview mode, safe undo, interactive clarification, and an embedded read-only Gemini CLI patch reviewer.',
         language: '',
         technologies: ['Python','CrewAI','Gemini CLI','Groq','Pydantic','html5lib','tinycss2'],
+    },
+    {
+        category: 'Backend Projects',
+        name: 'dhaka-tesla-pool-',
+        href: 'https://github.com/NaimurRahmannn/dhaka-tesla-pool-',
+        demoUrl: 'https://dhaka-tesla-pool-lemon-chi.vercel.app/',
+        description: 'A ride-pooling MVP for passengers and drivers in Dhaka. Passengers can request and track rides while drivers manage vehicles and trips. A NestJS API calculates routing-based fares, manages ride and pool lifecycles, and allocates seats transactionally with PostgreSQL and Prisma.',
+        highlights: [
+            'Role-based passenger and driver accounts with JWT authentication.',
+            'OSRM routing for distance-based fares and Leaflet maps for ride previews.',
+            'Transactional pool membership and seat-capacity checks to prevent concurrent overbooking.',
+        ],
+        technologies: ['NestJS', 'Next.js', 'TypeScript', 'PostgreSQL', 'Prisma', 'OSRM', 'Leaflet'],
     },
     {
         category: 'Backend Projects',
@@ -139,6 +159,14 @@ const projects = [
     },
     {
         category: 'Frontend Projects',
+        name: 'ByteSpace-New',
+        href: 'https://github.com/NaimurRahmannn/ByteSpace-New',
+        demoUrl: 'https://byte-space-new-roan.vercel.app/',
+        description: 'A responsive EdTech landing page with course discovery, learning paths, and creator features, plus dedicated sign-in and registration screens. Built from Figma designs with client-side routing and a cohesive visual system.',
+        technologies: ['React', 'React Router', 'Vite', 'Tailwind CSS'],
+    },
+    {
+        category: 'Frontend Projects',
         name: 'Kenakata-ecommerce-storefront-Next.js-',
         href: 'https://github.com/NaimurRahmannn/Kenakata-ecommerce-storefront-Next.js-',
         demoUrl: 'https://kenakata-ecommerce-storefront-next-js.onrender.com/',
@@ -188,108 +216,118 @@ const projects = [
     },
 ]
 
-const projectSections = ['AI Engineering Projects', 'Backend Projects', 'Frontend Projects', 'Devops and Cloud']
+const projectPreviews = {
+    'TravelAI-Agent-v2-LangGraph': {
+        title: 'TravelAI Agent',
+        summary: 'An AI travel planner with agent workflows, persistent traveler memory, external travel data, and structured itineraries.',
+    },
+    'OpenSteward-MCP-Server': {
+        title: 'OpenSteward MCP Server',
+        summary: 'A read-only service that explains pull request readiness, policy checks, related history, and review cost for maintainers.',
+    },
+    'Ecommerce-sites-with-Django': {
+        title: 'Haatify',
+        summary: 'A Django storefront with PostgreSQL hybrid product search, a RAG shopping assistant, and Stripe checkout.',
+    },
+    'My-own-shell-for-Linux-OS-Mshx': {
+        title: 'MshX Unix Shell',
+        summary: 'A shell written in C with a tokenizer, parser, AST, pipelines, redirection, background jobs, and command history.',
+    },
+}
+
+const projectTitles = {
+    'dhaka-tesla-pool-': 'Dhaka Tesla Pool',
+    'ByteSpace-New': 'ByteSpace',
+    'Archittecture-vs-Data-Harmonization-for-generalisable-Polyp-Segmentation': 'Polyp Segmentation Research',
+    'Multi-Agent-Orchestrator': 'AgentOrchestra',
+    'sales-insight-agent': 'Sales Insight Agent',
+    'AI-Agent-Webpage-editor': 'AI Webpage Editor',
+    'Stalker-A-Unified-Competitive-Profile': 'Stalker Competitive Profile',
+    'Kash-An-Expense-Tracker': 'Kash Expense Tracker',
+    'TravelSphere': 'TravelSphere',
+    'Property_Management_System': 'Property Management System',
+    'SEO-Audit-Tool-FastAPI': 'SEO Audit Tool',
+    'Kenakata-ecommerce-storefront-Next.js-': 'Kenakata Storefront',
+    'Travels_Property': 'Travel Property',
+    'Amazon_Clone-HTML-CSS': 'Amazon UI Clone',
+    'okcomputerstuff-aws-infrastructure': 'AWS Infrastructure',
+    'Devops-Practice-Lab': 'DevOps Practice Lab',
+}
+
+const projectSections = [
+    { category: 'AI Engineering Projects', title: 'AI Engineering', id: 'ai-engineering-projects' },
+    { category: 'Backend Projects', title: 'Backend', id: 'backend-projects' },
+    { category: 'Frontend Projects', title: 'Frontend', id: 'frontend-projects' },
+    { category: 'Devops and Cloud', title: 'DevOps & Cloud', id: 'devops-cloud-projects' },
+]
 
 export default function ProjectsPage() {
-    const [expandedProject, setExpandedProject] = useState(null)
-
     return (
-        <section className="mx-auto w-full max-w-305 overflow-hidden rounded-[20px] border border-slate-300 bg-white shadow-[0_14px_36px_rgba(15,23,42,0.08)]">
-            <header className="border-b border-slate-200 bg-slate-50/80 px-5 py-6 sm:px-8">
-                <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
-                    <div>
-                        <div className="flex items-center gap-2 text-sm text-slate-500">
-                            <BookMarked size={16} />
-                            <span>naimurrahmanlam / repositories</span>
+        <section className="portfolio-panel mx-auto w-full max-w-305 px-5 py-7 sm:px-8 sm:py-9 lg:px-10 lg:py-10">
+            <SectionHeading
+                eyebrow="Portfolio work"
+                title="Projects"
+                description="Engineering work across AI applications, backend systems, frontend development, and cloud infrastructure."
+            />
+
+            <p className="mt-6 text-sm text-[#758199]">{projects.length} projects across four areas</p>
+
+            {projectSections.map((section) => {
+                const sectionProjects = projects.filter((project) => project.category === section.category)
+
+                return (
+                    <section key={section.category} className="mt-10" aria-labelledby={section.id}>
+                        <div className="flex items-baseline justify-between gap-4 border-b border-[#e4e7ec] pb-3">
+                            <h3 id={section.id} className="font-serif text-2xl font-semibold text-[#18233b]">{section.title}</h3>
+                            <span className="text-sm text-[#758199]">{sectionProjects.length} projects</span>
                         </div>
-                        <h1 className="mt-3 text-2xl font-bold tracking-tight text-slate-900">Projects</h1>
-                        <p className="mt-1 max-w-2xl text-sm leading-6 text-slate-600">
-                            A collection of projects I built across AI engineering, backend systems, and frontend development.
-                        </p>
-                </div>
-                </div>
-            </header>
 
-            <div className="flex flex-wrap items-center gap-2 border-b border-slate-200 px-5 pt-4 sm:px-8">
-                <button type="button" className="border-b-2 border-orange-500 px-2 pb-3 text-sm font-semibold text-slate-900">
-                    Overview
-                </button>
-                <button type="button" className="px-2 pb-3 text-sm text-slate-500 transition-colors hover:text-slate-900">
-                    Repositories <span className="ml-1 rounded-full bg-slate-100 px-1.5 py-0.5 text-xs">{projects.length}</span>
-                </button>
-            </div>
+                        <div className="mt-5 grid gap-4 lg:grid-cols-2">
+                            {sectionProjects.map((project) => {
+                                const title = projectPreviews[project.name]?.title || projectTitles[project.name] || project.name
+                                const preview = projectPreviews[project.name]?.summary || project.description?.split('\n\n')[0]
+                                const hasDetails = Boolean(project.highlights?.length || (project.description?.length ?? 0) > 220)
 
-            <div className="px-5 py-5 sm:px-8">
-                {projectSections.map((section) => {
-                    const sectionProjects = projects.filter((project) => project.category === section)
+                                return (
+                                    <article key={project.name} className="flex h-full min-w-0 flex-col rounded-xl border border-[#e4e7ec] bg-[#fcfcfb] p-5 sm:p-6">
+                                        <h4 className="font-serif text-xl font-semibold text-[#18233b] sm:text-2xl">{title}</h4>
+                                        {preview && <p className={`mt-3 text-sm leading-6 text-[#5e6a7e] ${hasDetails ? 'line-clamp-3' : ''}`}>{preview}</p>}
 
-                    if (sectionProjects.length === 0 && !['Backend Projects', 'Frontend Projects', 'Devops and Cloud'].includes(section)) return null
+                                        {(project.technologies || project.topics || []).length > 0 && (
+                                            <ul className="mt-5 flex flex-wrap gap-2" aria-label={`${title} technologies`}>
+                                                {(project.technologies || project.topics).map((technology) => (
+                                                    <li key={technology} className="rounded-md border border-[#e5e8ed] bg-white px-2.5 py-1 text-xs font-medium text-[#56647c]">{technology}</li>
+                                                ))}
+                                            </ul>
+                                        )}
 
-                    return (
-                        <section key={section} className="mt-6 first:mt-5" aria-labelledby={section}>
-                            <div className="mb-3 flex items-center gap-3">
-                                <h2 id={section} className="text-lg font-semibold text-slate-900">{section}</h2>
-                                <span className="rounded-full bg-slate-100 px-2 py-0.5 text-xs text-slate-600">{sectionProjects.length}</span>
-                            </div>
-                            <div className="grid gap-3 lg:grid-cols-2">
-                                {sectionProjects.map((project) => (
-                                    <article
-                                        key={project.name}
-                                        role="link"
-                                        tabIndex={project.href ? 0 : undefined}
-                                        onClick={() => project.href && window.open(project.href, '_blank', 'noopener,noreferrer')}
-                                        onKeyDown={(event) => {
-                                            if (project.href && (event.key === 'Enter' || event.key === ' ')) {
-                                                event.preventDefault()
-                                                window.open(project.href, '_blank', 'noopener,noreferrer')
-                                            }
-                                        }}
-                                        className="block cursor-pointer rounded-md transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500"
-                                    >
-                                        <div className="h-full min-w-0 rounded-md border border-slate-300 p-5 transition-colors hover:border-slate-500">
-                                        <div className="flex min-w-0 items-start justify-between gap-3">
-                                            <span className="min-w-0 break-all text-base font-semibold text-sky-700 group-hover:underline">{project.name}</span>
-                                                {project.demoUrl && <a href={project.demoUrl} target="_blank" rel="noreferrer" onClick={(event) => event.stopPropagation()} className="shrink-0 rounded-md bg-emerald-600 px-2.5 py-1 text-[11px] font-semibold text-white hover:bg-emerald-700">Live demo</a>}
-                                        </div>
-                                        {project.description && <p className="mt-2 min-h-12 break-words whitespace-pre-line text-sm leading-5 text-slate-600">{project.description}</p>}
-                                        {project.highlights && (
-                                            <>
-                                                <button
-                                                    type="button"
-                                                    onClick={(event) => {
-                                                        event.stopPropagation()
-                                                        setExpandedProject(expandedProject === project.name ? null : project.name)
-                                                    }}
-                                                    className="mt-3 text-sm font-semibold text-sky-700 hover:underline"
-                                                >
-                                                    {expandedProject === project.name ? 'Show less' : 'Show more'}
-                                                </button>
-                                                {expandedProject === project.name && (
-                                                    <div className="mt-4 border-t border-slate-200 pt-4 text-sm leading-6 text-slate-600">
-                                                        <h3 className="mt-4 font-semibold text-slate-900">The Applications</h3>
-                                                        <ul className="mt-2 list-disc space-y-1 pl-5">
+                                        {hasDetails && (
+                                            <details className="group mt-5 border-t border-[#e4e7ec] pt-3">
+                                                <summary className="flex cursor-pointer list-none items-center gap-1 text-sm font-semibold text-[#283654] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#18233b] [&::-webkit-details-marker]:hidden">
+                                                    Project details <ChevronDown size={15} className="transition-transform group-open:rotate-180" aria-hidden="true" />
+                                                </summary>
+                                                <div className="mt-3 space-y-3 text-sm leading-6 text-[#5e6a7e]">
+                                                    <p className="whitespace-pre-line">{project.description}</p>
+                                                    {project.highlights?.length > 0 && (
+                                                        <ul className="list-disc space-y-1 pl-5">
                                                             {project.highlights.map((highlight) => <li key={highlight}>{highlight}</li>)}
                                                         </ul>
-                                                    </div>
-                                                )}
-                                            </>
+                                                    )}
+                                                </div>
+                                            </details>
                                         )}
-                                        <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-slate-500">
-                                            {project.language && <span className="inline-flex items-center gap-1.5"><span className="h-3 w-3 rounded-full bg-yellow-400" />{project.language}</span>}
-                                        </div>
-                                        <div className="mt-4 flex flex-wrap gap-1.5">
-                                            {(project.technologies || project.topics || []).map((topic) => <span key={topic} className="rounded-full bg-sky-50 px-2.5 py-1 text-[11px] font-medium text-sky-700">{topic}</span>)}
-                                        </div>
+
+                                        <div className="mt-auto flex flex-wrap gap-x-5 gap-y-2 pt-6 text-sm font-semibold text-[#283654]">
+                                            <a href={project.href} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 hover:underline">Repository <ExternalLink size={14} aria-hidden="true" /></a>
+                                            {project.demoUrl && <a href={project.demoUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 hover:underline">Live demo <ExternalLink size={14} aria-hidden="true" /></a>}
                                         </div>
                                     </article>
-                                ))}
-                            </div>
-                            {sectionProjects.length === 0 && <p className="rounded-md border border-dashed border-slate-300 px-5 py-6 text-sm text-slate-500">{section} will appear here.</p>}
-                        </section>
-                    )
-                })}
-
-            </div>
+                                )
+                            })}
+                        </div>
+                    </section>
+                )
+            })}
         </section>
     )
 }

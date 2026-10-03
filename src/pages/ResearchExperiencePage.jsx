@@ -1,4 +1,4 @@
-import { FlaskConical } from 'lucide-react'
+import SectionHeading from '../components/SectionHeading'
 
 const researchItems = [
     {
@@ -18,31 +18,25 @@ const researchItems = [
 
 export default function ResearchExperiencePage() {
     return (
-        <section className="mx-auto w-full max-w-305 rounded-[28px] border border-slate-200/80 bg-white px-6 py-6 shadow-[0_14px_36px_rgba(15,23,42,0.08)] sm:px-8 sm:py-7 lg:px-9 lg:py-8">
-            <header className="border-b border-slate-200 pb-5">
-                <div className="flex items-start gap-3">
-                    <div className="mt-1 flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-rose-100 text-rose-700">
-                        <FlaskConical size={21} />
-                    </div>
-                    <div>
-                        <h1 className="text-2xl font-bold tracking-tight text-slate-900">Research Experience</h1>
-                        <p className="mt-1.5 text-sm leading-6 text-slate-600">Research contributions in machine learning and robust computer vision.</p>
-                    </div>
-                </div>
-            </header>
+        <section className="portfolio-panel mx-auto w-full max-w-305 px-5 py-7 sm:px-8 sm:py-9 lg:px-10 lg:py-10">
+            <SectionHeading
+                eyebrow="Research"
+                title="Research Experience"
+                description="Research contributions in machine learning and robust computer vision."
+            />
 
             <div className="divide-y divide-slate-200">
                 {researchItems.map((item) => (
                     <article key={item.title} className="py-6 last:pb-1">
                         <p className="text-sm font-medium text-slate-500">{item.period}</p>
-                        <h2 className="mt-2 break-words text-lg font-semibold leading-7 text-slate-900">{item.title}</h2>
+                        <h3 className="mt-2 break-words text-lg font-semibold leading-7 text-slate-900">{item.title}</h3>
                         <p className="mt-1 text-sm italic text-slate-600">{item.context}</p>
                         <p className="mt-4 text-sm leading-6 text-slate-600">{item.summary}</p>
-                        <h3 className="mt-5 text-sm font-semibold uppercase tracking-[0.15em] text-slate-500">Research Contributions & Findings</h3>
+                        <h4 className="mt-5 text-sm font-semibold uppercase tracking-[0.15em] text-slate-500">Research Contributions & Findings</h4>
                         <ul className="mt-4 space-y-2 text-sm leading-6 text-slate-600">
                             {item.contributions.map((contribution) => (
                                 <li key={contribution} className="flex gap-2">
-                                    <span className="mt-3 h-1.5 w-1.5 shrink-0 rounded-full bg-rose-500" aria-hidden="true" />
+                                    <span className="mt-3 h-1.5 w-1.5 shrink-0 rounded-full bg-[#a9b4c4]" aria-hidden="true" />
                                     <span>{contribution}</span>
                                 </li>
                             ))}

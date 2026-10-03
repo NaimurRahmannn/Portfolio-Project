@@ -1,1 +1,23 @@
 @import "tailwindcss";
+
+body {
+  background: #f8f8f6;
+  color: #18233b;
+}
+
+.portfolio-panel {
+  border: 1px solid #e5e8ed;
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0 14px 48px rgba(24, 35, 59, 0.045);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

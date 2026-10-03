@@ -1,3 +1,5 @@
+import SectionHeading from '../components/SectionHeading'
+
 const competitiveProgramming = [
     {
         title: 'Codeforces',
@@ -61,13 +63,13 @@ function AchievementSection({ title, description, items }) {
     return (
         <section className="mt-9" aria-labelledby={`${title.toLowerCase().replaceAll(' ', '-')}-title`}>
             <div className="flex items-end gap-4">
-                <h2
+                <h3
                     id={`${title.toLowerCase().replaceAll(' ', '-')}-title`}
-                    className="shrink-0 text-lg font-semibold uppercase tracking-[0.08em] text-slate-900"
+                    className="text-lg font-semibold text-[#18233b]"
                 >
                     {title}
-                </h2>
-                <div className="mb-1.5 h-px flex-1 bg-slate-400" aria-hidden="true" />
+                </h3>
+                <div className="mb-1.5 h-px flex-1 bg-slate-200" aria-hidden="true" />
             </div>
             <p className="mt-1.5 text-sm text-slate-500">{description}</p>
 
@@ -75,26 +77,26 @@ function AchievementSection({ title, description, items }) {
                 {items.map((item) => (
                     <article
                         key={item.title}
-                        className="grid min-w-0 gap-x-6 gap-y-1 border-b border-slate-100 py-3 last:border-b-0 sm:grid-cols-[minmax(0,1fr)_minmax(0,12rem)]"
+                        className="grid min-w-0 gap-x-6 gap-y-1 border-b border-slate-200 py-4 last:border-b-0 sm:grid-cols-[minmax(0,1fr)_minmax(0,12rem)]"
                     >
                         <div>
                             {item.href ? (
-                                <h3 className="text-[15px] font-bold leading-5">
+                                <h4 className="text-[15px] font-bold leading-5">
                                     <a
                                         href={item.href}
                                         target="_blank"
                                         rel="noreferrer"
-                                        className="text-sky-700 transition-colors hover:text-sky-900"
+                                        className="text-[#283654] transition-colors hover:text-[#566b8d] hover:underline"
                                     >
                                         {item.title}
                                     </a>
-                                </h3>
+                                </h4>
                             ) : (
-                                <h3 className="text-[15px] font-bold leading-5 text-slate-900">{item.title}</h3>
+                                <h4 className="text-[15px] font-bold leading-5 text-slate-900">{item.title}</h4>
                             )}
                             <p className="mt-1 text-sm leading-5 text-slate-600">{item.detail}</p>
                         </div>
-                        <p className="wrap-break-word text-sm font-semibold text-sky-700 sm:text-right">{item.achievement}</p>
+                        <p className="wrap-break-word text-sm font-semibold text-[#283654] sm:text-right">{item.achievement}</p>
                     </article>
                 ))}
             </div>
@@ -104,14 +106,12 @@ function AchievementSection({ title, description, items }) {
 
 export default function AwardsAchievementsPage() {
     return (
-        <section className="mx-auto w-full max-w-305 bg-white px-6 py-7 shadow-[0_10px_30px_rgba(15,23,42,0.07)] sm:px-9 lg:px-11 lg:py-9">
-            <header>
-                <h1 className="text-3xl font-bold tracking-tight text-slate-900">Awards & Achievements</h1>
-                <p className="mt-2 max-w-3xl text-[15px] leading-6 text-slate-600">
-                    Recognition earned through competitive programming, hackathons, and data-focused competitions.
-                </p>
-                <div className="mt-4 h-px bg-slate-900" aria-hidden="true" />
-            </header>
+        <section className="portfolio-panel mx-auto w-full max-w-305 px-5 py-7 sm:px-8 sm:py-9 lg:px-10 lg:py-10">
+            <SectionHeading
+                eyebrow="Recognition"
+                title="Awards & Achievements"
+                description="Results from competitive programming, hackathons, and data-focused competitions."
+            />
 
             <AchievementSection
                 title="Competitive Programming"
@@ -119,7 +119,7 @@ export default function AwardsAchievementsPage() {
                 items={competitiveProgramming}
             />
 
-            <p className="mt-4 border-l-3 border-sky-600 pl-4 text-sm font-medium leading-6 text-slate-700">
+            <p className="mt-4 border-l-2 border-[#a9b4c4] pl-4 text-sm font-medium leading-6 text-slate-700">
                 Solved 1500+ problems and participated in 200+ online contests across Codeforces, CodeChef, UVA,
                 Vjudge, and SPOJ.
             </p>

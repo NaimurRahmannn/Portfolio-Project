@@ -1,5 +1,6 @@
 import internshipCertificate from '../../internship_cirtificate.jpg'
 import trainingCertificate from '../../training_cirtificate.jpg'
+import SectionHeading from '../components/SectionHeading'
 
 const experienceItems = [
     {
@@ -40,14 +41,12 @@ const experienceItems = [
 
 export default function TrainingWorkExperiencePage() {
     return (
-        <section className="rounded-2xl border border-slate-200/80 bg-white/85 p-5 shadow-[0_10px_24px_rgba(15,23,42,0.06)] sm:p-6">
-            <div className="border-b border-slate-200 pb-5">
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Career timeline</p>
-                <h2 className="mt-2 text-2xl font-semibold text-slate-900">Education & Work Experience</h2>
-                <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
-                    A record of engineering experience, focused training, and academic foundations.
-                </p>
-            </div>
+        <section className="portfolio-panel mx-auto w-full max-w-305 px-5 py-7 sm:px-8 sm:py-9 lg:px-10 lg:py-10">
+            <SectionHeading
+                eyebrow="Career timeline"
+                title="Education & Work Experience"
+                description="Engineering experience, focused training, and academic foundations."
+            />
 
             <div className="divide-y divide-slate-200">
                 {experienceItems.map((item) => (
@@ -58,7 +57,7 @@ export default function TrainingWorkExperiencePage() {
                         </div>
                         <div className={item.certificate ? 'grid min-w-0 gap-5 md:grid-cols-[minmax(0,1fr)_7rem] md:items-start' : 'min-w-0'}>
                             <div className="min-w-0">
-                                <h3 className="break-words text-lg font-semibold text-slate-900">{item.title}</h3>
+                                <h3 className="break-words text-lg font-semibold text-[#18233b]">{item.title}</h3>
                                 <div className="mt-1 flex flex-wrap gap-x-2 text-sm text-slate-600">
                                     <span>{item.organization}</span>
                                     <span aria-hidden="true">&middot;</span>
@@ -78,7 +77,7 @@ export default function TrainingWorkExperiencePage() {
                                     href={item.certificate}
                                     target="_blank"
                                     rel="noreferrer"
-                                    className="block w-fit rounded-lg border border-slate-200 bg-slate-50 p-2 transition-shadow hover:shadow-md focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2"
+                                    className="block w-fit rounded-lg border border-slate-200 bg-slate-50 p-2 transition-shadow hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#18233b]"
                                     aria-label={`Open ${item.certificateAlt}`}
                                 >
                                     <img
