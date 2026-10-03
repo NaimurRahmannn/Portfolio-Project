@@ -35,7 +35,7 @@ export default function Home() {
             <PortfolioNavbar />
             <PortfolioHeader />
 
-            <main className="mx-auto w-full max-w-305 space-y-10 px-4 pb-20 pt-10 sm:space-y-14 sm:px-8 sm:pt-14 2xl:px-0">
+            <main className="mx-auto w-full max-w-305 space-y-10 px-4 pb-20 pt-6 sm:space-y-14 sm:px-8 sm:pt-8 2xl:px-0">
                 {sections.map((section) => (
                     <section key={section.id} id={section.id} className="min-w-0 scroll-mt-28">
                         <section.Component />

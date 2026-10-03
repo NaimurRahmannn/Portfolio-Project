@@ -20,7 +20,7 @@ export default function PortfolioHeader({
     return (
         <header id="top" className="relative isolate overflow-hidden bg-[#f8f8f6] text-[#18233b]">
             <div className="pointer-events-none absolute -right-36 top-8 -z-10 h-120 w-120 rounded-full bg-[#eef0ef] blur-3xl" aria-hidden="true" />
-            <div className="mx-auto grid w-full max-w-340 items-center gap-12 px-5 pb-20 pt-16 sm:px-8 sm:pb-24 sm:pt-20 lg:min-h-150 lg:grid-cols-[minmax(0,1.4fr)_minmax(18rem,0.6fr)] lg:gap-14 lg:px-10 lg:pb-28 lg:pt-24">
+            <div className="mx-auto grid w-full max-w-340 items-center gap-12 px-5 pb-10 pt-16 sm:px-8 sm:pb-12 sm:pt-20 lg:min-h-150 lg:grid-cols-[minmax(0,1.4fr)_minmax(18rem,0.6fr)] lg:gap-14 lg:px-10 lg:pb-14 lg:pt-24">
                 <div className="min-w-0">
                     <p className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-[#66738a]">
                         <MapPin size={14} aria-hidden="true" />
