@@ -1,3 +1,4 @@
+import { ExternalLink } from 'lucide-react'
 import internshipCertificate from '../../internship_cirtificate.jpg'
 import trainingCertificate from '../../training_cirtificate.jpg'
 import SectionHeading from '../components/SectionHeading'
@@ -5,16 +6,29 @@ import SectionHeading from '../components/SectionHeading'
 const experienceItems = [
     {
         type: 'Work Experience',
+        title: 'Software Engineer I',
+        organization: 'Wempro',
+        team: 'Backend Engineering',
+        location: 'Dhaka, Bangladesh',
+        period: 'Nov 2026 – Present',
+        details: [
+            'Building backend microservices for ElementSearch, a distributed search platform, using FastAPI, RabbitMQ for async messaging, PostgreSQL with SQLAlchemy ORM, and Flyway for version-controlled database migrations.',
+            'Integrating HashiCorp Vault for centralized secrets management across microservices, ensuring secure credential rotation and environment isolation.',
+        ],
+    },
+    {
+        type: 'Work Experience',
         title: 'Software Engineering Intern',
         organization: 'W3 Engineers Ltd.',
+        team: 'Presto Agent Orchestration Team',
         location: 'Dhaka, Bangladesh',
-        period: 'May 2026 - August 2026',
+        period: 'May 2026 – Aug 2026',
         certificate: internshipCertificate,
         certificateAlt: 'W3 Engineers Ltd. internship certificate',
         details: [
-            'Built backend systems, full-stack applications, automated test suites, and web scrapers across Python, Django, Go, Beego, React, and Next.js through a project-based engineering rotation covering the full production stack.',
-            'Developed LLM-powered applications and AI agents, including prompt engineering and AI-assisted development workflows, applying software engineering best practices with Docker, version control, and testing.',
-            'Worked with the Presto team on agent orchestration frameworks and AI agent infrastructure in an Agile development environment.',
+            'Built a trip-planning agent with LangGraph, FastAPI, and Next.js that turns chat conversations into day-by-day itineraries with clarification prompts, streaming, and human approval; prototyped to complement Sonder Concierge’s itinerary-to-stay matching.',
+            'Developed a multi-agent webpage editor that routes natural-language changes to HTML, CSS, and SEO specialists, validates browser-rendered output, and applies only QA-approved changes.',
+            'Completed an engineering rotation building backend and full-stack projects in Python, Go, Django, FastAPI, React, and Next.js, with code reviews from senior engineers.',
         ],
     },
     {
@@ -50,16 +64,36 @@ export default function TrainingWorkExperiencePage() {
 
             <div className="divide-y divide-slate-200">
                 {experienceItems.map((item) => (
-                    <article key={`${item.type}-${item.title}`} className="grid gap-4 py-6 first:pt-6 last:pb-1 md:grid-cols-[10rem_1fr] md:gap-8">
+                    <article key={`${item.type}-${item.organization}-${item.title}`} className="grid gap-4 py-6 first:pt-6 last:pb-1 md:grid-cols-[10rem_1fr] md:gap-8">
                         <div>
                             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">{item.type}</p>
                             <p className="mt-2 text-sm font-medium text-slate-700">{item.period}</p>
                         </div>
                         <div className={item.certificate ? 'grid min-w-0 gap-5 md:grid-cols-[minmax(0,1fr)_7rem] md:items-start' : 'min-w-0'}>
                             <div className="min-w-0">
-                                <h3 className="break-words text-lg font-semibold text-[#18233b]">{item.title}</h3>
-                                <div className="mt-1 flex flex-wrap gap-x-2 text-sm text-slate-600">
-                                    <span>{item.organization}</span>
+                                <div className="flex flex-wrap items-center gap-2.5">
+                                    <h3 className="break-words text-lg font-semibold text-[#18233b]">{item.title}</h3>
+                                    {item.certificate && (
+                                        <a
+                                            href={item.certificate}
+                                            target="_blank"
+                                            rel="noreferrer"
+                                            className="inline-flex items-center gap-1 rounded border border-slate-200 bg-slate-50 px-2 py-0.5 text-xs font-semibold text-slate-700 transition hover:bg-slate-100 hover:text-[#18233b] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#18233b]"
+                                            aria-label={`Open ${item.certificateAlt}`}
+                                        >
+                                            Certificate
+                                            <ExternalLink size={12} aria-hidden="true" />
+                                        </a>
+                                    )}
+                                </div>
+                                <div className="mt-1 flex flex-wrap items-center gap-x-2 text-sm text-slate-600">
+                                    <span className="font-medium text-slate-800">{item.organization}</span>
+                                    {item.team && (
+                                        <>
+                                            <span aria-hidden="true">&middot;</span>
+                                            <span>{item.team}</span>
+                                        </>
+                                    )}
                                     <span aria-hidden="true">&middot;</span>
                                     <span>{item.location}</span>
                                 </div>
